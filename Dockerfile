@@ -15,4 +15,4 @@ RUN apk del build-base git
 
 EXPOSE $PORT
 USER app
-CMD bundle exec puma config.ru
+CMD bundle exec puma -p $PORT -C config.ru
