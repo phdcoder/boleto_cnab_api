@@ -13,6 +13,6 @@ RUN bundle config --global frozen 1
 RUN bundle install
 RUN apk del build-base git
 
-EXPOSE 9292
+EXPOSE $PORT
 USER app
 CMD bundle exec puma config.ru
